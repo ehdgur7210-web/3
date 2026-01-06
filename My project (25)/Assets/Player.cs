@@ -3,10 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// 플레이어 컨트롤러
-/// Rigidbody를 사용한 이동 및 점프
-/// </summary>
+
 public class Player : MonoBehaviour
 {
     //인터페이스에서 조절을 하기때문에 겟터셋터 사용안함
@@ -17,7 +14,7 @@ public class Player : MonoBehaviour
 
     [Header("이동 설정")]
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float rotationSpeed = 10f;
+    
 
     [Header("점프 설정")]
     [SerializeField] private float jumpPower = 5f;
@@ -68,10 +65,10 @@ public class Player : MonoBehaviour
         // 이동 벡터에 속도를 적용해야지 움직인다.
         Vector3 targetVelocity = movement * moveSpeed;
 
-        // Y축 속도는 유지 (중력 영향)
+        // Y축 속도는 유지
         targetVelocity.y = rb.velocity.y;
 
-        // Rigidbody의 속도 설정
+       
         rb.velocity = targetVelocity;
 
     }

@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 232701449}
   - component: {fileID: 232701448}
   - component: {fileID: 232701447}
-  - component: {fileID: 232701446}
+  - component: {fileID: 232701451}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Untagged
@@ -142,28 +142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &232701446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232701445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c61712836b061a43a9dee4cf14fdb05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 1985465964}
-  hp: 100
-  atk: 10
-  def: 5
-  moveSpeed: 2
-  isDead: 0
-  detectionRange: 10
-  attackRange: 1
-  attackCooldown: 1
-  attackCooldownTimer: 0
 --- !u!65 &232701447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -179,7 +157,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -250,6 +228,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &232701451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232701445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e4acc450a4f6e46b57762ad70a6c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1985465964}
+  isDead: 0
+  detectionRange: 10
+  attackRange: 2
+  attackCooldown: 2
+  attackCooldownTimer: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +689,6 @@ MonoBehaviour:
   hp: 0
   maxhp: 100
   moveSpeed: 5
-  rotationSpeed: 10
   jumpPower: 5
   groundLayer:
     serializedVersion: 2
